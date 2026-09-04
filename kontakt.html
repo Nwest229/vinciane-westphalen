@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt &amp; Erstgespräch | Vinciane von Westphalen – Coaching &amp; Supervision</title>
+  <meta name="description" content="Nehmen Sie Kontakt auf und buchen Sie ein unverbindliches Erstgespräch. Häufige Fragen zu Ablauf, Kosten, Dauer, Online-Coaching und Sprachen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-vw.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Startseite – Vinciane von Westphalen">
+      <img class="brand__logo" src="assets/img/logo-vw.svg" alt="" width="48" height="40" />
+      <span class="brand__text">
+        <span class="brand__name">Vinciane von Westphalen</span>
+        <span class="brand__tag">Coaching · Supervision · Organisationsberatung</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-controls="nav-links" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="referenzen.html">Referenzen</a></li>
+      <li><a href="ueber-mich.html">Über mich</a></li>
+      <li><a class="active" href="kontakt.html">Kontakt</a></li>
+      <li class="nav-cta"><a class="btn btn-primary" href="kontakt.html">Erstgespräch buchen</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section section--white section--tight">
+    <div class="wrap narrow">
+      <p class="eyebrow">Kontakt</p>
+      <h1>Lassen Sie uns ins Gespräch kommen</h1>
+      <p class="lead">Buchen Sie ein unverbindliches Erstgespräch – wir finden gemeinsam heraus, wie ich Sie unterstützen kann.</p>
+    </div>
+  </section>
+
+  <section class="section section--white" style="padding-top:0">
+    <div class="wrap grid grid-2" style="align-items:start">
+      <!-- Formular -->
+      <div>
+        <form id="kontaktformular" class="form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">E-Mail</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="telefon">Telefon <span style="font-weight:400;color:var(--ink-mute)">(optional)</span></label>
+              <input type="tel" id="telefon" name="telefon" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="anliegen">Ihr Anliegen</label>
+              <select id="anliegen" name="anliegen">
+                <option value="">Bitte wählen …</option>
+                <option>Coaching für Führungskräfte</option>
+                <option>Team-Supervision / Team-Coaching</option>
+                <option>Organisationsberatung</option>
+                <option>Interkulturelle Begleitung / Expats</option>
+                <option>Familienunternehmen</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="nachricht">Ihre Nachricht</label>
+            <textarea id="nachricht" name="nachricht" required></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" id="datenschutz" name="datenschutz" required />
+            <span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> zur Kenntnis genommen und bin damit einverstanden, dass meine Daten zur Kontaktaufnahme gespeichert werden.</span>
+          </label>
+
+          <p style="font-size:.88rem;color:var(--ink-mute);max-width:60ch">
+            Mit dem Absenden Ihrer Anfrage erklären Sie sich damit einverstanden, dass Ihre angegebenen Daten zur Bearbeitung Ihres Anliegens verarbeitet und gespeichert werden. Eine Weitergabe an Dritte findet nicht statt. Sie können Ihre Einwilligung jederzeit widerrufen. Weitere Informationen finden Sie in unserer Datenschutzerklärung.
+          </p>
+
+          <div>
+            <button type="submit" class="btn btn-primary btn-arrow">Nachricht senden</button>
+          </div>
+
+          <p id="form-note" hidden style="color:var(--navy-800);background:var(--terra-100);padding:1rem 1.2rem;border-radius:3px">
+            Vielen Dank! Sobald das Formular technisch angebunden ist, geht Ihre Nachricht direkt bei Vinciane von Westphalen ein. Bis dahin erreichen Sie sie gerne per E-Mail.
+          </p>
+        </form>
+      </div>
+
+      <!-- Kontaktdaten -->
+      <aside>
+        <div class="card">
+          <h3>Direkt erreichen</h3>
+          <ul class="info-list">
+            <li><span class="k">E-Mail</span> <a href="mailto:kontakt@example.de">kontakt@example.de</a></li>
+            <li><span class="k">Telefon</span> +49 (0)&nbsp;— noch ergänzen</li>
+            <li><span class="k">Sprachen</span> Deutsch · Französisch · Englisch</li>
+          </ul>
+          <p style="margin:1.2rem 0 0;font-size:.92rem;color:var(--ink-soft)">Beratung vor Ort in Frankfurt/Rhein-Main, München, Paris, Straßburg und der Schweiz – sowie deutschlandweit und international online.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--paper2">
+    <div class="wrap narrow">
+      <p class="eyebrow">Häufige Fragen</p>
+      <h2>FAQ</h2>
+      <p style="background:var(--terra-100);color:var(--navy-800);padding:.9rem 1.1rem;border-radius:3px;max-width:60ch;font-size:.92rem">
+        <strong>Hinweis:</strong> Die Fragen stammen aus dem Textmanuskript; die Antworten sind Entwurfsvorschläge und können von Ihnen frei angepasst werden.
+      </p>
+      <div class="faq mt-2">
+        <details>
+          <summary>Wie läuft ein Erstgespräch ab?</summary>
+          <p>Das Erstgespräch ist unverbindlich und dient dem gegenseitigen Kennenlernen. Wir klären Ihr Anliegen, Ihre Ziele und ob und wie eine Zusammenarbeit sinnvoll ist.</p>
+        </details>
+        <details>
+          <summary>Was kostet ein Coaching?</summary>
+          <p>Die Kosten richten sich nach Umfang und Format der Begleitung. Im Erstgespräch erhalten Sie ein transparentes, auf Ihre Situation zugeschnittenes Angebot.</p>
+        </details>
+        <details>
+          <summary>Wie lange dauert ein Coaching-Prozess?</summary>
+          <p>Das hängt von Ihrem Anliegen ab. Manche Themen lassen sich in wenigen Sitzungen klären, andere profitieren von einer längeren Begleitung. Wir stimmen den passenden Rahmen gemeinsam ab.</p>
+        </details>
+        <details>
+          <summary>Arbeiten Sie auch online?</summary>
+          <p>Ja. Neben der Arbeit vor Ort biete ich deutschlandweit und international Online-Coaching an.</p>
+        </details>
+        <details>
+          <summary>Welche Sprachen bieten Sie an?</summary>
+          <p>Ich arbeite auf Deutsch, Französisch und Englisch – mit besonderem Schwerpunkt auf der deutsch-französischen Zusammenarbeit.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="assets/img/logo-vw-light.svg" alt="" width="46" height="38" />
+        <span>
+          <span class="brand__name" style="font-family:var(--serif);font-size:1.28rem;font-weight:600;">Vinciane von Westphalen</span><br>
+          <span class="brand__tag" style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;">Coaching · Supervision · Organisationsberatung</span>
+        </span>
+      </div>
+      <p>Maßgeschneiderte Begleitung für Führungskräfte, Teams und Organisationen – interkulturell, vertraulich und nachhaltig.</p>
+      <p class="footer-cred">Master Coaching, Organisationsberatung &amp; Supervision · Universität Paris VI (La Sorbonne) · Goethe-Institut</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="referenzen.html">Referenzen</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Einzugsgebiete</h4>
+      <ul>
+        <li>Frankfurt / Rhein-Main · München</li>
+        <li>Paris · Straßburg</li>
+        <li>Genf · Lausanne · Bern · Basel</li>
+        <li>Deutschlandweit &amp; international: Online</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Vinciane von Westphalen</span>
+    <span>
+      <a href="impressum.html">Impressum</a> &nbsp;·&nbsp;
+      <a href="datenschutz.html">Datenschutz</a>
+    </span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
