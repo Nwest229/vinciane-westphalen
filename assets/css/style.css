@@ -351,3 +351,54 @@ strong { color: var(--ink); font-weight: 600; }
 
 /* ---------- Bild in der Seitenspalte (Kontakt) ---------- */
 .aside-img { width: 100%; height: 300px; object-fit: cover; object-position: center 66%; filter: grayscale(100%); border-radius: 3px; box-shadow: var(--shadow); margin-bottom: 1.4rem; }
+
+/* ---------- Leistungen: aufklappbar (Details/Summary) ---------- */
+details.service { padding: 0; }
+details.service > summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; gap: .8rem;
+  padding: clamp(1.15rem, 2.6vw, 1.6rem) clamp(1.4rem, 3vw, 2.4rem);
+  transition: background .15s ease;
+}
+details.service > summary::-webkit-details-marker { display: none; }
+details.service > summary:hover { background: var(--paper); }
+details.service > summary h3 { margin: 0; }
+details.service > summary::after {
+  content: "+"; margin-left: auto; flex: none;
+  font-family: var(--sans); font-weight: 400; font-size: 1.7rem; line-height: 1;
+  color: var(--terra-500); transition: transform .2s ease;
+}
+details.service[open] > summary::after { content: "–"; }
+details.service[open] > summary { border-bottom: 1px solid var(--line); }
+.service__body { padding: clamp(1.4rem, 3vw, 1.9rem) clamp(1.4rem, 3vw, 2.4rem) clamp(1.5rem, 3vw, 2.3rem); }
+
+/* ---------- Footer: Mitgliedschaft / Akkreditierung ---------- */
+.footer-member { display: flex; align-items: center; gap: 1rem; margin-top: 1.6rem; }
+.footer-member img { width: 128px; height: auto; display: block; border-radius: 5px; border: 1px solid rgba(255,255,255,.1); }
+.footer-member span { font-size: .78rem; color: #8894ac; line-height: 1.45; }
+
+/* ======================================================
+   DESIGN-VARIANTEN (für die Präsentation)
+   V1 = Blau & Weiß · V2 = Blau & Gold · Original = Terrakotta
+   Alle Akzente laufen über --terra-* und --paper*, daher
+   genügt das Überschreiben dieser wenigen Variablen.
+   ====================================================== */
+:root[data-theme="v1"] {
+  --terra-600: #335a8a; --terra-500: #3f6ca3; --terra-100: #e5edf6;
+  --paper: #f7f9fc; --paper-2: #e9f0f8;
+}
+:root[data-theme="v2"] {
+  --terra-600: #86682f; --terra-500: #9e7b3a; --terra-100: #efe6cf;
+  --paper: #faf8f3; --paper-2: #f1ead9;
+}
+
+/* ---------- Umschalter (Vorschau-Werkzeug) ---------- */
+.theme-switch { position: fixed; left: 16px; bottom: 16px; z-index: 200; background: #fff; border: 1px solid var(--line); border-radius: 11px; box-shadow: 0 10px 34px rgba(22,35,61,.18); padding: .62rem .7rem; font-family: var(--sans); max-width: calc(100vw - 32px); }
+.theme-switch__label { font-size: .62rem; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-mute); margin: 0 0 .5rem .1rem; }
+.theme-switch__row { display: flex; gap: .4rem; flex-wrap: wrap; align-items: center; }
+.theme-switch button, .theme-switch a.ts-link { font-family: var(--sans); font-size: .82rem; font-weight: 600; border: 1px solid var(--line); background: #fbf9f6; color: #232830; border-radius: 7px; padding: .42rem .7rem; cursor: pointer; display: inline-flex; align-items: center; gap: .45rem; text-decoration: none; line-height: 1; }
+.theme-switch button:hover, .theme-switch a.ts-link:hover { border-color: #26375c; }
+.theme-switch button .sw { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+.theme-switch button[aria-pressed="true"] { border-color: #26375c; box-shadow: inset 0 0 0 1px #26375c; }
+.theme-switch a.ts-link { background: #1c2b4a; color: #fff; border-color: #1c2b4a; }
+@media (max-width: 520px){ .theme-switch { left: 10px; right: 10px; bottom: 10px; } }
+@media print { .theme-switch { display: none; } }

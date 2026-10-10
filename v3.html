@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V3 Interaktiv – Ihre maßgeschneiderte Ansicht | Westphalen Beratung</title>
+  <meta name="description" content="Interaktive Variante: Wählen Sie Ihren Bereich – Führungskraft, Team, Expat, Familienunternehmen oder Organisation – und sehen Sie sofort, wie eine Zusammenarbeit konkret aussieht." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-vw.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* V3-spezifisch */
+    .v3-intro { padding-block: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2.5rem); }
+    .choices { display: grid; gap: clamp(1rem, 2.2vw, 1.4rem); grid-template-columns: 1fr; }
+    @media (min-width: 620px){ .choices { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 980px){ .choices { grid-template-columns: 1fr 1fr 1fr; } }
+    .choice {
+      text-align: left; cursor: pointer; font-family: var(--sans);
+      background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--terra-500);
+      border-radius: 3px; padding: clamp(1.4rem, 3vw, 1.9rem); box-shadow: var(--shadow);
+      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease; display: flex; flex-direction: column; gap: .5rem;
+    }
+    .choice:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(22,35,61,.12); }
+    .choice[aria-pressed="true"] { border-color: var(--navy-700); box-shadow: inset 0 0 0 2px var(--navy-700); }
+    .choice h3 { margin: 0; display: flex; align-items: baseline; gap: .6rem; }
+    .choice .num { font-size: .78rem; font-weight: 700; color: var(--terra-600); letter-spacing: .08em; font-family: var(--sans); }
+    .choice p { margin: 0; color: var(--ink-soft); font-size: .98rem; }
+    .choice .go { margin-top: .4rem; font-weight: 600; color: var(--navy-700); font-size: .92rem; }
+    .choice .go::after { content: " →"; }
+
+    .result { scroll-margin-top: 90px; }
+    .result[hidden] { display: none; }
+    .result__head { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; justify-content: space-between; }
+    .result__reset { font-family: var(--sans); font-weight: 600; font-size: .92rem; background: transparent; border: 1.5px solid var(--navy-800); color: var(--navy-800); border-radius: 2px; padding: .6rem 1.1rem; cursor: pointer; }
+    .result__reset:hover { background: var(--navy-800); color: #fff; }
+    .result__reset::before { content: "↺ "; }
+    .v3-back { font-size: .92rem; font-weight: 600; }
+    .v3-back::before { content: "← "; }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Startseite – Westphalen Beratung">
+      <img class="brand__logo" src="assets/img/logo-vw.svg" alt="" width="48" height="40" />
+      <span class="brand__text">
+        <span class="brand__name">Westphalen Beratung</span>
+        <span class="brand__tag">Coaching · Supervision · Organisationsberatung</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-controls="nav-links" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Start</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="referenzen.html">Referenzen</a></li>
+      <li><a href="ueber-mich.html">Über mich</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li class="nav-cta"><a class="btn btn-primary" href="kontakt.html">Erstgespräch buchen</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Intro / Chooser -->
+  <section class="section section--white v3-intro">
+    <div class="wrap">
+      <div class="narrow">
+        <p class="eyebrow">Interaktiv · maßgeschneidert</p>
+        <h1>Was beschreibt Ihre Situation am besten?</h1>
+        <p class="lead">Wählen Sie Ihren Bereich – ich zeige Ihnen sofort, welche typischen Situationen ich kenne und wie eine Zusammenarbeit konkret aussieht.</p>
+      </div>
+
+      <div class="choices mt-2" id="choices" role="list">
+        <button class="choice" type="button" data-profile="fuehrung" role="listitem">
+          <h3><span class="num">01</span> Führungskraft</h3>
+          <p>Klarheit in Rolle, Entscheidungen und Wirkung gewinnen.</p>
+          <span class="go">Ansehen</span>
+        </button>
+        <button class="choice" type="button" data-profile="ehrenamt" role="listitem">
+          <h3><span class="num">02</span> Ehrenamt &amp; Vereine</h3>
+          <p>Zwischen Ehrenamt und Hauptamt professionell führen.</p>
+          <span class="go">Ansehen</span>
+        </button>
+        <button class="choice" type="button" data-profile="expats" role="listitem">
+          <h3><span class="num">03</span> Expats</h3>
+          <p>Kulturelle Codes verstehen und sicher entscheiden.</p>
+          <span class="go">Ansehen</span>
+        </button>
+        <button class="choice" type="button" data-profile="teams" role="listitem">
+          <h3><span class="num">04</span> Team</h3>
+          <p>Rollen, Dynamiken und Zusammenarbeit klären.</p>
+          <span class="go">Ansehen</span>
+        </button>
+        <button class="choice" type="button" data-profile="familie" role="listitem">
+          <h3><span class="num">05</span> Familienunternehmen</h3>
+          <p>Familie und Unternehmen in Einklang bringen.</p>
+          <span class="go">Ansehen</span>
+        </button>
+        <button class="choice" type="button" data-profile="orga" role="listitem">
+          <h3><span class="num">06</span> Organisation</h3>
+          <p>Veränderungsprozesse nachhaltig begleiten.</p>
+          <span class="go">Ansehen</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tailored result -->
+  <section class="section section--paper2 result" id="result" hidden aria-live="polite">
+    <div class="wrap">
+      <div class="result__head">
+        <div>
+          <p class="eyebrow" id="r-eyebrow">Ihre Auswahl</p>
+          <h2 id="r-head" style="margin-bottom:0"></h2>
+        </div>
+        <button class="result__reset" type="button" id="reset">Andere Auswahl</button>
+      </div>
+
+      <p id="r-intro" class="measure" style="margin-top:1rem"></p>
+
+      <div class="service" style="margin-top:1.4rem">
+        <div class="service__body" style="padding-top:clamp(1.4rem,3vw,2rem)">
+          <div class="cols">
+            <div>
+              <p class="subhead">Typische Situationen</p>
+              <ul class="ticks" id="r-sit"></ul>
+            </div>
+            <div>
+              <p class="subhead">So unterstütze ich Sie</p>
+              <ul class="ticks ticks--arrow" id="r-help"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-actions" style="justify-content:flex-start;margin-top:1.8rem">
+        <a class="btn btn-primary btn-arrow" href="kontakt.html">Erstgespräch buchen</a>
+        <a class="btn btn-outline" href="leistungen.html">Alle Leistungen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" style="padding-top:clamp(2rem,4vw,3rem)">
+    <div class="wrap narrow text-center">
+      <a class="v3-back" href="index.html">Zurück zur Hauptversion</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="assets/img/logo-vw-light.svg" alt="" width="46" height="38" />
+        <span>
+          <span class="brand__name" style="font-family:var(--serif);font-size:1.28rem;font-weight:600;">Westphalen Beratung</span><br>
+          <span class="brand__tag" style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;">Coaching · Supervision · Organisationsberatung</span>
+        </span>
+      </div>
+      <p>Maßgeschneiderte Begleitung für Führungskräfte, Teams und Organisationen – interkulturell, vertraulich und nachhaltig.</p>
+      <p class="footer-cred">Master Coaching, Organisationsberatung &amp; Supervision · Universität Paris VI (La Sorbonne) · Goethe-Institut</p>
+      <div class="footer-member">
+        <img src="assets/img/dgsv-logo.png" alt="Logo DGSv – Deutsche Gesellschaft für Supervision und Coaching" width="128" height="74" />
+        <span>Mitglied der DGSv –<br>Deutsche Gesellschaft für Supervision und Coaching e.V.</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="referenzen.html">Referenzen</a></li>
+        <li><a href="ueber-mich.html">Über mich</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Einzugsgebiete</h4>
+      <ul>
+        <li>Deutschland · Frankreich · Schweiz</li>
+        <li>Belgien · Luxemburg</li>
+        <li>International: Online-Coaching</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Westphalen Beratung</span>
+    <span>
+      <a href="impressum.html">Impressum</a> &nbsp;·&nbsp;
+      <a href="datenschutz.html">Datenschutz</a>
+    </span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  (function () {
+    var P = {
+      fuehrung: {
+        head: 'Für Sie als Führungskraft',
+        intro: 'Sie tragen Verantwortung für sich, Ihr Team und Ihre Entscheidungen. Gemeinsam schaffen wir Klarheit und stärken Ihre Wirkung.',
+        sit: ['Klarheit in beruflichen Zielen finden','Leadership übernehmen und eine klare Managementhaltung entwickeln','Managementschwierigkeiten und Stress bewältigen','Kommunikationsschwierigkeiten abbauen, Wirkung stärken','Burn-out-Risiken erkennen und vorbeugen','Schwierige Entscheidungen treffen, Entscheidungsüberforderung abbauen','Konflikte lösen, Klarheit in Dilemma-Situationen schaffen','Nachlassende Arbeitsqualität, Engagement und Commitment wieder stärken'],
+        help: ['Einzelcoaching und Einzel-Supervision zur Reflexion und Weiterentwicklung','Coaching zu Leadership & Managementhaltung','Training zu Kommunikation, Stimme, Präsenz und Auftritt','Workshops und Fortbildungen']
+      },
+      ehrenamt: {
+        head: 'Für ehrenamtliche Führungskräfte und Organisationen',
+        intro: 'Ehrenamt und Hauptamt wirkungsvoll verbinden – professionell, ohne die Seele des Vereins zu verlieren.',
+        sit: ['Rollen und Führungsstrukturen zwischen Ehrenamt und Hauptamt klären','Professionalität stärken, ohne die Seele des Vereins zu verlieren'],
+        help: ['Begleitung in der Zusammenarbeit mit Hauptamtlichen','Trainings und Workshops']
+      },
+      expats: {
+        head: 'Für Sie als Expat',
+        intro: 'Zwischen zwei Kulturen sicher handeln – ich kenne beide Seiten und baue Brücken.',
+        sit: ['Kulturelle Codes verstehen und nutzen','Entscheidungsprozesse absichern','Neue Handlungsspielräume finden','Berufliche Rolle reflektieren und weiterentwickeln'],
+        help: ['Interkulturelle Begleitung (Schwerpunkt deutsch-französisch)','Einzelcoaching']
+      },
+      teams: {
+        head: 'Für Ihr Team',
+        intro: 'Aus Spannungen wird Zusammenarbeit: Wir klären Rollen, Dynamiken und Strukturen und stärken die Leistungsfähigkeit.',
+        sit: ['Strukturelle Defizite erkennen und beheben','Neue Strategien entwickeln (Verantwortlichkeiten, Kommunikation, Teambildung)','Teamdynamik und Zusammenarbeit stärken','Rollen klären und abgrenzen','Strukturwechsel begleiten','Probleme in der Unternehmenskultur angehen','Ineffizienzen bei der Zusammenarbeit beseitigen','Abwesenheit und sinkendes Engagement verstehen'],
+        help: ['Team-Supervision zur Klärung von Dynamiken, Rollen und Zusammenarbeit','Team-Coaching zum Aufbau von Vertrauen und Leistungsfähigkeit','Trainings und Workshops (auch für deutsch-französische Teams)','Ursachenanalyse mit gezielten Maßnahmen und messbaren Ergebnissen']
+      },
+      familie: {
+        head: 'Für Ihr Familienunternehmen',
+        intro: 'Familienunternehmen sind anders: Hier treffen emotionale Bindungen auf wirtschaftliche Interessen. Diese Verbindung schafft einzigartige Stärken – und kann zu großen Spannungen führen.',
+        sit: ['Klarheit schaffen und Spannungsfelder erkennen','Visionen entwickeln, Rollen analysieren und ausrichten','Neue Strategien entwickeln (Verantwortlichkeiten, Kommunikation, Teambildung)','Rollen klären und abgrenzen','Nachfolge- und Entscheidungsprozesse klären','Zukunftsfähigkeit sichern, Tradition und Innovation in Einklang bringen'],
+        help: ['Organisationsbegleitung – von der Diagnose über den Aktionsplan bis zur Nachbereitung','Trainings und Workshops','Neutraler und analytischer Blick von außen']
+      },
+      orga: {
+        head: 'Für Ihre Organisation',
+        intro: 'Veränderungsprozesse, die wirklich tragen – strukturiert von der Diagnose bis zur Nachbereitung.',
+        sit: ['Veränderungsprozesse anstoßen und steuern','Strukturen und Strategien nachhaltig weiterentwickeln'],
+        help: ['Organisationsbegleitung für nachhaltige Veränderungsprozesse','Von der Diagnose über den Aktionsplan bis zur Nachbereitung']
+      }
+    };
+
+    var result = document.getElementById('result');
+    var rHead = document.getElementById('r-head');
+    var rIntro = document.getElementById('r-intro');
+    var rSit = document.getElementById('r-sit');
+    var rHelp = document.getElementById('r-help');
+    var choices = document.querySelectorAll('.choice');
+
+    function fill(ul, items) {
+      ul.innerHTML = '';
+      items.forEach(function (t) { var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
+    }
+
+    function choose(key, btn) {
+      var p = P[key]; if (!p) return;
+      rHead.textContent = p.head;
+      rIntro.textContent = p.intro;
+      fill(rSit, p.sit);
+      fill(rHelp, p.help);
+      result.hidden = false;
+      choices.forEach(function (c) { c.setAttribute('aria-pressed', c === btn ? 'true' : 'false'); });
+      result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      try { history.replaceState(null, '', '#' + key); } catch (e) {}
+    }
+
+    choices.forEach(function (btn) {
+      btn.addEventListener('click', function () { choose(btn.getAttribute('data-profile'), btn); });
+    });
+
+    document.getElementById('reset').addEventListener('click', function () {
+      result.hidden = true;
+      choices.forEach(function (c) { c.setAttribute('aria-pressed', 'false'); });
+      document.getElementById('choices').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      try { history.replaceState(null, '', location.pathname); } catch (e) {}
+    });
+
+    // Deep-link: #profil vorauswählen
+    var hash = (location.hash || '').replace('#', '');
+    if (P[hash]) {
+      var pre = document.querySelector('.choice[data-profile="' + hash + '"]');
+      if (pre) choose(hash, pre);
+    }
+  })();
+</script>
+</body>
+</html>
