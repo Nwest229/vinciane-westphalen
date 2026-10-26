@@ -184,11 +184,13 @@ p{margin:0 0 1.05em}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
 
 /* Mobile-Sicherung */
+@media(max-width:900px){
+  .nav__right .btn-navy{display:none}  /* Kontakt steckt im Menü */
+}
 @media(max-width:640px){
   .brand small{display:none}
-  .brand b{font-size:1rem}
+  .brand b{font-size:1.02rem;white-space:nowrap}
   .nav__in{min-height:60px}
-  .btn-navy,.nav__right .btn{padding:.6rem 1rem;font-size:.9rem}
   .hero__facts{gap:1.2rem 1.6rem}
 }
 html,body{overflow-x:clip}
