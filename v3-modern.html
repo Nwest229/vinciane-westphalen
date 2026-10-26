@@ -3,190 +3,176 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>V3 · Modern – Westphalen Beratung</title>
-  <meta name="description" content="Für Führungskräfte, Teams und Organisationen: Einblicke aus der Praxis – und wie Coaching, Supervision und Organisationsberatung bei Westphalen Beratung konkret aussehen." />
+  <title>V3 · Corporate – Westphalen Beratung</title>
+  <meta name="description" content="Coaching, Supervision und Organisationsberatung für Führungskräfte, Teams und Organisationen. Entdecken Sie die passenden Leistungen für Ihre Situation." />
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="assets/img/logo-vw.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-vw-corp.svg" />
   <link rel="stylesheet" href="assets/css/v3.css" />
 </head>
 <body>
 
-<header class="top" id="top">
-  <a class="brand" href="index.html" aria-label="Westphalen Beratung – Start">
-    <img src="assets/img/logo-vw.svg" alt="" />
-    <span><b>Westphalen Beratung</b><small>Coaching · Supervision</small></span>
-  </a>
-  <a class="navcta" href="kontakt.html">Erstgespräch →</a>
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="brand" href="index.html" aria-label="Westphalen Beratung – Start">
+      <img src="assets/img/logo-vw-corp.svg" alt="" />
+      <span><b>Westphalen Beratung</b><small>Coaching · Supervision · Organisationsberatung</small></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#vorgehen">Vorgehen</a></li>
+      <li><a href="#ueber">Über mich</a></li>
+      <li><a href="#referenzen">Referenzen</a></li>
+    </ul>
+    <div class="nav__right">
+      <a class="btn btn-navy" href="kontakt.html">Kontakt aufnehmen</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="nav__mobile" id="navMobile">
+    <div class="wrap">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#vorgehen">Vorgehen</a>
+      <a href="#ueber">Über mich</a>
+      <a href="#referenzen">Referenzen</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+  </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="wrap">
-    <p class="hero__meta"><b>Westphalen Beratung</b> &nbsp;/&nbsp; für Führungskräfte, Teams &amp; Organisationen</p>
-    <h1 class="display">Veränderung braucht <span class="blue">Klarheit.</span></h1>
-    <div class="hero__band">
-      <p class="hero__sub">Coaching, Supervision und Organisationsberatung — damit Entscheidungen tragen und Teams handlungsfähig bleiben.</p>
+  <div class="wrap hero__grid">
+    <div>
+      <p class="label">Coaching · Supervision · Organisationsberatung</p>
+      <h1>Klarheit für Führungskräfte, Teams und <span class="accent">Organisationen.</span></h1>
+      <p class="hero__sub">Maßgeschneiderte Begleitung durch Veränderung – damit Entscheidungen tragen und Teams handlungsfähig bleiben.</p>
       <div class="hero__cta">
-        <a class="btn btn-blue" href="#einblicke">Ein paar Einblicke <span class="ar">↓</span></a>
-        <a class="link" href="kontakt.html">Erstgespräch buchen</a>
+        <a class="btn btn-primary" href="#leistungen">Leistungen entdecken</a>
+        <a class="textlink" href="#ueber">Mehr über mich →</a>
+      </div>
+      <div class="hero__facts">
+        <div class="hero__fact"><b>~30</b><span>Jahre interkulturelle Praxis</span></div>
+        <div class="hero__fact"><b>3</b><span>Sprachen: DE · FR · EN</span></div>
+        <div class="hero__fact"><b>5 + Online</b><span>DE · FR · CH · BE · LU</span></div>
       </div>
     </div>
-  </div>
-  <figure class="hero__img">
-    <img src="assets/img/v3-speaking.jpg" alt="Vinciane von Westphalen bei einem Vortrag am Rednerpult" />
-    <div class="wrap"><figcaption>Vinciane von Westphalen — Coach, Supervisorin &amp; Organisationsberaterin</figcaption></div>
-  </figure>
-</section>
-
-<!-- 01 · EINBLICKE -->
-<section class="sec" id="einblicke">
-  <div class="wrap">
-    <div class="row reveal">
-      <p class="tag"><span class="num">01</span> Einblicke aus der Praxis</p>
-      <div>
-        <h2 class="h-xl">Vier Überzeugungen, die meine Arbeit prägen.</h2>
-        <p class="lead measure" style="margin-top:1.4rem">Bevor wir über Zusammenarbeit sprechen — ein paar Gedanken, die in über 25 Jahren zwischen Kulturen, Teams und Hierarchien entstanden sind.</p>
-      </div>
-    </div>
-
-    <div class="principles reveal">
-      <article class="principle">
-        <div class="idx">(01)</div>
-        <div><h3>Erst Klarheit, dann Richtung.</h3>
-          <p>Viele Blockaden sind keine Strategie-, sondern Klarheitsprobleme. Erst wenn der Nebel sich lichtet, entsteht eine Vision — und die Richtung wird erkennbar. Deshalb beginnt jede Zusammenarbeit mit Klärung, nicht mit dem schnellen Rezept.</p></div>
-      </article>
-      <article class="principle">
-        <div class="idx">(02)</div>
-        <div><h3>Unterschiede sind eine Ressource.</h3>
-          <p>Kulturelle, organisatorische und menschliche Unterschiede lassen sich in Quellen von Leistungsfähigkeit und Zusammenhalt verwandeln — statt sie als Störung zu behandeln. Gerade in internationalen und deutsch-französischen Kontexten.</p></div>
-      </article>
-      <article class="principle">
-        <div class="idx">(03)</div>
-        <div><h3>Psychologische Sicherheit schlägt Harmonie.</h3>
-          <p>Starke Teams vermeiden keine Konflikte — sie können sie benennen. Aus Missverständnissen und Spannungen werden Klarheit, Transparenz und Leichtigkeit in der Zusammenarbeit.</p></div>
-      </article>
-      <article class="principle">
-        <div class="idx">(04)</div>
-        <div><h3>Der neutrale Blick von außen.</h3>
-          <p>Ich bin an keine Kultur, Hierarchie oder interne Logik gebunden. Dieser Außenblick macht blinde Flecken sichtbar — analytisch, vertraulich und ohne eigene Agenda.</p></div>
-      </article>
-    </div>
+    <figure class="hero__media">
+      <img src="assets/img/v3-speaking.jpg" alt="Vinciane von Westphalen bei einem Vortrag" />
+    </figure>
   </div>
 </section>
 
-<!-- 02 · SELBST-CHECK (interaktiv) -->
-<section class="sec diag" id="diagnose">
+<!-- LEISTUNGEN-EXPLORER (Kern) -->
+<section class="sec sec--grey" id="leistungen">
   <div class="wrap">
-    <div class="row reveal">
-      <p class="tag tag--onblue"><span class="num">02</span> Selbst-Check</p>
-      <div>
-        <h2 class="h-xl">Erkennen Sie sich wieder?</h2>
-        <p class="intro" style="margin-top:1.4rem">Wählen Sie, was Ihre Situation am besten beschreibt. Sie sehen die Muster, die mir immer wieder begegnen — und wo Veränderung konkret ansetzt.</p>
+    <div class="sec-head reveal">
+      <p class="label">Leistungen</p>
+      <h2>Wählen Sie Ihre Situation.</h2>
+      <p>Jede Begleitung ist zugeschnitten. Klicken Sie sich durch die Bereiche – Sie sehen die typischen Situationen und die passenden Leistungen.</p>
+    </div>
+
+    <div class="explore reveal">
+      <div class="explore__tabs" role="tablist" aria-label="Für wen">
+        <button class="explore__tab" role="tab" aria-selected="true"  data-p="fuehrung"><span class="tn">01</span> Führungskräfte &amp; Manager:innen</button>
+        <button class="explore__tab" role="tab" aria-selected="false" data-p="teams"><span class="tn">02</span> Teams</button>
+        <button class="explore__tab" role="tab" aria-selected="false" data-p="expats"><span class="tn">03</span> Expats</button>
+        <button class="explore__tab" role="tab" aria-selected="false" data-p="familie"><span class="tn">04</span> Familienunternehmen</button>
+        <button class="explore__tab" role="tab" aria-selected="false" data-p="orga"><span class="tn">05</span> Organisationen</button>
+        <button class="explore__tab" role="tab" aria-selected="false" data-p="ehrenamt"><span class="tn">06</span> Ehrenamt &amp; Vereine</button>
       </div>
-    </div>
-
-    <div class="selector" role="tablist" aria-label="Ihre Situation">
-      <button role="tab" aria-selected="true"  data-p="fuehrung"><span class="n">01</span>Führungskraft</button>
-      <button role="tab" aria-selected="false" data-p="teams"><span class="n">02</span>Team</button>
-      <button role="tab" aria-selected="false" data-p="expats"><span class="n">03</span>Expat</button>
-      <button role="tab" aria-selected="false" data-p="familie"><span class="n">04</span>Familienunternehmen</button>
-      <button role="tab" aria-selected="false" data-p="orga"><span class="n">05</span>Organisation</button>
-      <button role="tab" aria-selected="false" data-p="ehrenamt"><span class="n">06</span>Ehrenamt</button>
-    </div>
-
-    <div class="panel" id="panel">
-      <div class="panel__text">
-        <span class="panel__num" id="p-num">01 / 06</span>
-        <h3 id="p-head"></h3>
-        <p class="lede" id="p-lede"></p>
-        <div class="panel__cols">
-          <div><h4>Typische Situationen</h4><ul id="p-sit"></ul></div>
-          <div><h4>So unterstütze ich Sie</h4><ul id="p-help"></ul></div>
+      <div class="explore__panel" id="epanel">
+        <h3 id="e-head"></h3>
+        <p class="lede" id="e-lede"></p>
+        <div class="ecols">
+          <div><h4>Typische Situationen</h4><ul id="e-sit"></ul></div>
+          <div><h4>So unterstütze ich Sie</h4><ul class="help" id="e-help"></ul></div>
         </div>
-        <div class="panel__cta"><a class="btn btn-light" href="kontakt.html">Dazu ins Gespräch kommen →</a></div>
       </div>
-      <figure class="panel__media">
-        <img src="assets/img/portrait-fenster.jpg" alt="Vinciane von Westphalen" />
-        <figcaption>Vinciane von Westphalen</figcaption>
-      </figure>
     </div>
   </div>
 </section>
 
-<!-- 03 · ANGEBOT -->
-<section class="sec" id="angebot">
+<!-- WARUM (kurz) -->
+<section class="sec" id="warum">
   <div class="wrap">
-    <div class="row reveal">
-      <p class="tag"><span class="num">03</span> Die Begleitung</p>
-      <div>
-        <h2 class="h-xl">So begleite ich Sie.</h2>
-        <p class="lead measure" style="margin-top:1.4rem">Von der ersten Klärung bis zur nachhaltigen Umsetzung — strukturiert und auf Ihre Situation zugeschnitten, nie von der Stange.</p>
-      </div>
+    <div class="sec-head reveal">
+      <p class="label">Warum Westphalen Beratung</p>
+      <h2>Ein klarer, neutraler Blick von außen.</h2>
+    </div>
+    <div class="values reveal">
+      <div class="value"><h3>Maßgeschneidert</h3><p>Keine vorgefertigten Programme, sondern Lösungen, die zu Ihrer Situation passen – flexibel und strukturiert zugleich.</p></div>
+      <div class="value"><h3>Interkulturell</h3><p>Deutsch-französischer Hintergrund und jahrzehntelange Erfahrung zwischen Kulturen, Sektoren und Hierarchien.</p></div>
+      <div class="value"><h3>Vertraulich</h3><p>Ein analytischer Außenblick ohne eigene Agenda – diskret, fundiert und auf Nachhaltigkeit ausgerichtet.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VORGEHEN -->
+<section class="sec sec--grey" id="vorgehen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="label">Vorgehen</p>
+      <h2>So arbeite ich.</h2>
+      <p>Von der ersten Klärung bis zur nachhaltigen Umsetzung – strukturiert und auf Ihre Situation zugeschnitten.</p>
     </div>
     <div class="steps reveal">
-      <div class="step"><span class="n">01</span><h3>Erkunden</h3><p>Verstehen, was ist — wo stehen Sie gerade?</p></div>
-      <div class="step"><span class="n">02</span><h3>Klären</h3><p>Ziele und Erwartungen formulieren — was soll erreicht werden?</p></div>
-      <div class="step"><span class="n">03</span><h3>Erarbeiten</h3><p>Lösungen entwickeln — wie kommen wir dorthin?</p></div>
-      <div class="step"><span class="n">04</span><h3>Überprüfen</h3><p>Wirksamkeit messen und anpassen — funktioniert es?</p></div>
-      <div class="step"><span class="n">05</span><h3>Implementieren</h3><p>Veränderungen dauerhaft festigen — Nachhaltigkeit sichern.</p></div>
+      <div class="stepc"><span class="n">01</span><h3>Erkunden</h3><p>Verstehen, was ist – wo stehen Sie gerade?</p></div>
+      <div class="stepc"><span class="n">02</span><h3>Klären</h3><p>Ziele und Erwartungen formulieren.</p></div>
+      <div class="stepc"><span class="n">03</span><h3>Erarbeiten</h3><p>Lösungen entwickeln – wie kommen wir dorthin?</p></div>
+      <div class="stepc"><span class="n">04</span><h3>Überprüfen</h3><p>Wirksamkeit messen und anpassen.</p></div>
+      <div class="stepc"><span class="n">05</span><h3>Implementieren</h3><p>Veränderungen dauerhaft festigen.</p></div>
     </div>
-    <div class="reveal" style="margin-top:2.2rem"><a class="link" href="leistungen.html">Das gesamte Leistungsspektrum ansehen →</a></div>
   </div>
 </section>
 
-<!-- 04 · ÜBER MICH -->
+<!-- ÜBER MICH -->
 <section class="sec" id="ueber">
-  <div class="wrap split">
+  <div class="wrap about">
+    <figure class="about__media reveal"><img src="assets/img/portrait-fenster.jpg" alt="Vinciane von Westphalen" /></figure>
     <div class="reveal">
-      <p class="tag"><span class="num">04</span> Über mich</p>
-      <h2 class="h-lg" style="margin-top:1.2rem">Warum Unternehmen mit mir arbeiten.</h2>
-      <p class="lead" style="margin-top:1.1rem">Ich bin Coach, Organisationsberaterin und Supervisorin mit deutsch-französischem Hintergrund. Seit knapp 30 Jahren bewege ich mich zwischen zwei Kulturen, Sprachen und Denkweisen — und navigiere zwischen Sektoren, Hierarchien und Logiken.</p>
-      <p class="body">Master in Coaching, Organisationsberatung &amp; Supervision · Universität Paris VI (La Sorbonne) · Mitglied der DGSv. Vertraulichkeit ist selbstverständlich, Humor ein wertvolles Arbeitsinstrument.</p>
-      <a class="btn btn-dark" href="ueber-mich.html" style="margin-top:.4rem">Mehr über mich →</a>
-    </div>
-    <figure class="split__media reveal" style="order:-1"><img src="assets/img/v3-speaking2.jpg" alt="Vinciane von Westphalen bei einem Vortrag" /></figure>
-  </div>
-</section>
-
-<!-- MOTTO -->
-<section class="sec motto">
-  <div class="wrap reveal">
-    <p class="tag"><span class="num">✳</span> Mein Motto</p>
-    <blockquote>Unterschiede in <span class="blue">Stärken</span> verwandeln und Brücken bauen.</blockquote>
-  </div>
-</section>
-
-<!-- 05 · REFERENZEN -->
-<section class="sec" id="ref">
-  <div class="wrap split">
-    <figure class="split__media wide reveal"><img src="assets/img/v3-audience.jpg" alt="Vinciane von Westphalen spricht vor Publikum" /></figure>
-    <div class="reveal">
-      <p class="tag"><span class="num">05</span> Referenzen</p>
-      <blockquote class="bigquote" style="margin-top:1.2rem">„Ich hatte kein genaues Ziel vor Augen. Sie haben mir geholfen, klarer zu sehen.“</blockquote>
-      <p class="lead">Ob im Einzelgespräch, in der Team-Supervision oder als Vortrag vor Publikum — ich schaffe Räume, in denen Klarheit entsteht.</p>
-      <a class="btn btn-dark" href="referenzen.html" style="margin-top:1.5rem">Mehr Referenzen →</a>
+      <p class="label">Über mich</p>
+      <h2>Vinciane von Westphalen</h2>
+      <p style="color:var(--muted);margin-top:1rem">Coach, Organisationsberaterin und Supervisorin mit deutsch-französischem Hintergrund. Seit knapp 30 Jahren bewege ich mich zwischen zwei Kulturen, Sprachen und Denkweisen – und navigiere zwischen Sektoren, Hierarchien und Logiken.</p>
+      <ul class="quals">
+        <li>Master in Coaching, Organisationsberatung &amp; Supervision</li>
+        <li>Master in Sprachtherapie – Universität Paris VI (La Sorbonne)</li>
+        <li>Großes Sprachdiplom – Goethe-Institut</li>
+      </ul>
+      <div class="badge">
+        <img src="assets/img/dgsv-logo.png" alt="Logo DGSv – Deutsche Gesellschaft für Supervision und Coaching" />
+        <span>Mitglied der DGSv –<br>Deutsche Gesellschaft für Supervision und Coaching e.V.</span>
+      </div>
+      <div style="margin-top:1.6rem"><a class="btn btn-ghost" href="ueber-mich.html">Ausführliches Profil →</a></div>
     </div>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee" aria-label="Einzugsgebiete: Deutschland, Frankreich, Schweiz, Belgien, Luxemburg, Online">
-  <div class="marquee__track" aria-hidden="true">
-    <span>Deutschland<i class="dot">◆</i></span><span>Frankreich<i class="dot">◆</i></span><span>Schweiz<i class="dot">◆</i></span><span>Belgien<i class="dot">◆</i></span><span>Luxemburg<i class="dot">◆</i></span><span>Online<i class="dot">◆</i></span>
-    <span>Deutschland<i class="dot">◆</i></span><span>Frankreich<i class="dot">◆</i></span><span>Schweiz<i class="dot">◆</i></span><span>Belgien<i class="dot">◆</i></span><span>Luxemburg<i class="dot">◆</i></span><span>Online<i class="dot">◆</i></span>
+<!-- REFERENZEN -->
+<section class="sec sec--grey" id="referenzen">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="label">Referenzen</p>
+      <h2>Was Kunden sagen.</h2>
+    </div>
+    <div class="quotes reveal">
+      <figure class="quote"><div class="mark">“</div><p>Ich wollte partout nicht sehen, dass ich mich in der Mitte eines Machtkonflikts befand. Das Coaching hat mir ermöglicht, dies zu erkennen und damit klarzukommen.</p></figure>
+      <figure class="quote"><div class="mark">“</div><p>Ich hatte kein genaues Ziel vor Augen und wusste nicht, wohin ich gehen wollte. Sie haben mir geholfen, klarer zu sehen.</p></figure>
+    </div>
+    <div class="reveal" style="margin-top:2rem"><a class="textlink" href="referenzen.html">Fallbeispiel aus der Praxis ansehen →</a></div>
   </div>
-</div>
+</section>
 
-<!-- CTA -->
+<!-- CTA (einmalig) -->
 <section class="sec cta">
-  <div class="wrap reveal" style="max-width:780px;margin-inline:auto">
-    <p class="mono" style="color:var(--blue-bright);text-align:center;margin-bottom:1rem">Kontakt</p>
-    <h2 class="h-xl">Lassen Sie uns ins Gespräch kommen.</h2>
-    <p>Buchen Sie ein unverbindliches Erstgespräch — wir finden gemeinsam heraus, wie ich Sie unterstützen kann.</p>
-    <a class="btn btn-light" href="kontakt.html">Erstgespräch buchen →</a>
+  <div class="wrap reveal">
+    <p class="label" style="color:#7fb0e6">Kontakt</p>
+    <h2>Bereit für den nächsten Schritt?</h2>
+    <p>In einem unverbindlichen Erstgespräch finden wir gemeinsam heraus, wie ich Sie unterstützen kann.</p>
+    <a class="btn btn-primary" href="kontakt.html">Erstgespräch vereinbaren</a>
   </div>
 </section>
 
@@ -196,11 +182,7 @@
     <div class="foot__brand">
       <b>Westphalen Beratung</b>
       <small>Coaching · Supervision · Organisationsberatung</small>
-      <p>Maßgeschneiderte Begleitung für Führungskräfte, Teams und Organisationen — interkulturell, vertraulich und nachhaltig.</p>
-      <div class="member">
-        <img src="assets/img/dgsv-logo.png" alt="Logo DGSv – Deutsche Gesellschaft für Supervision und Coaching" />
-        <span>Mitglied der DGSv —<br>Deutsche Gesellschaft für Supervision und Coaching e.V.</span>
-      </div>
+      <p>Maßgeschneiderte Begleitung für Führungskräfte, Teams und Organisationen – interkulturell, vertraulich und nachhaltig.</p>
     </div>
     <div>
       <h4>Navigation</h4>
@@ -219,7 +201,7 @@
         <li>Belgien · Luxemburg</li>
         <li>International: Online-Coaching</li>
       </ul>
-      <p style="margin-top:1.2rem"><a class="link link--onblue" href="index.html">← Zur Hauptversion</a></p>
+      <p style="margin-top:1rem"><a href="index.html">← Zur Hauptversion</a></p>
     </div>
   </div>
   <div class="wrap foot__bottom">
@@ -230,38 +212,41 @@
 
 <script>
 (function(){
-  var top=document.getElementById('top');
-  var onScroll=function(){ top.classList.toggle('scrolled', window.scrollY>40); };
-  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+  // Mobile-Nav
+  var t=document.getElementById('navToggle'),m=document.getElementById('navMobile');
+  t.addEventListener('click',function(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');t.setAttribute('aria-expanded','false');}});
 
+  // Reveal
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
+  // Leistungen-Explorer
   var P={
-    fuehrung:{n:'01',head:'Für Sie als Führungskraft',lede:'Sie tragen Verantwortung für sich, Ihr Team und Ihre Entscheidungen. Gemeinsam schaffen wir Klarheit und stärken Ihre Wirkung.',
+    fuehrung:{head:'Für Führungskräfte & Manager:innen',lede:'Sie tragen Verantwortung für sich, Ihr Team und Ihre Entscheidungen. Gemeinsam schaffen wir Klarheit und stärken Ihre Wirkung.',
       sit:['Klarheit in beruflichen Zielen finden','Leadership übernehmen und eine klare Managementhaltung entwickeln','Managementschwierigkeiten und Stress bewältigen','Kommunikationsschwierigkeiten abbauen, Wirkung stärken','Burn-out-Risiken erkennen und vorbeugen','Schwierige Entscheidungen treffen','Konflikte lösen, Klarheit in Dilemma-Situationen schaffen'],
       help:['Einzelcoaching und Einzel-Supervision','Coaching zu Leadership & Managementhaltung','Training zu Kommunikation, Stimme, Präsenz und Auftritt','Workshops und Fortbildungen']},
-    teams:{n:'02',head:'Für Ihr Team',lede:'Aus Spannungen wird Zusammenarbeit: Wir klären Rollen, Dynamiken und Strukturen und stärken die Leistungsfähigkeit.',
+    teams:{head:'Für Teams',lede:'Aus Spannungen wird Zusammenarbeit: Wir klären Rollen, Dynamiken und Strukturen und stärken die Leistungsfähigkeit.',
       sit:['Strukturelle Defizite erkennen und beheben','Neue Strategien entwickeln (Verantwortlichkeiten, Kommunikation, Teambildung)','Teamdynamik und Zusammenarbeit stärken','Rollen klären und abgrenzen','Strukturwechsel begleiten','Probleme in der Unternehmenskultur angehen'],
       help:['Team-Supervision zur Klärung von Dynamiken und Rollen','Team-Coaching zum Aufbau von Vertrauen und Leistungsfähigkeit','Trainings und Workshops (auch deutsch-französisch)','Ursachenanalyse mit messbaren Ergebnissen']},
-    expats:{n:'03',head:'Für Sie als Expat',lede:'Zwischen zwei Kulturen sicher handeln — ich kenne beide Seiten und baue Brücken.',
+    expats:{head:'Für Expats',lede:'Zwischen zwei Kulturen sicher handeln – ich kenne beide Seiten und baue Brücken.',
       sit:['Kulturelle Codes verstehen und nutzen','Entscheidungsprozesse absichern','Neue Handlungsspielräume finden','Berufliche Rolle reflektieren und weiterentwickeln'],
       help:['Interkulturelle Begleitung (Schwerpunkt deutsch-französisch)','Einzelcoaching']},
-    familie:{n:'04',head:'Für Ihr Familienunternehmen',lede:'Hier treffen emotionale Bindungen auf wirtschaftliche Interessen. Diese Verbindung schafft einzigartige Stärken — und kann zu großen Spannungen führen.',
+    familie:{head:'Für Familienunternehmen',lede:'Hier treffen emotionale Bindungen auf wirtschaftliche Interessen. Diese Verbindung schafft einzigartige Stärken – und kann zu großen Spannungen führen.',
       sit:['Klarheit schaffen und Spannungsfelder erkennen','Visionen entwickeln, Rollen analysieren und ausrichten','Neue Strategien entwickeln','Nachfolge- und Entscheidungsprozesse klären','Tradition und Innovation in Einklang bringen'],
       help:['Organisationsbegleitung – von der Diagnose bis zur Nachbereitung','Trainings und Workshops','Neutraler und analytischer Blick von außen']},
-    orga:{n:'05',head:'Für Ihre Organisation',lede:'Veränderungsprozesse, die wirklich tragen — strukturiert von der Diagnose bis zur Nachbereitung.',
+    orga:{head:'Für Organisationen',lede:'Veränderungsprozesse, die wirklich tragen – strukturiert von der Diagnose bis zur Nachbereitung.',
       sit:['Veränderungsprozesse anstoßen und steuern','Strukturen und Strategien nachhaltig weiterentwickeln'],
       help:['Organisationsbegleitung für nachhaltige Veränderungsprozesse','Von der Diagnose über den Aktionsplan bis zur Nachbereitung']},
-    ehrenamt:{n:'06',head:'Für ehrenamtliche Führungskräfte',lede:'Ehrenamt und Hauptamt wirkungsvoll verbinden — professionell, ohne die Seele des Vereins zu verlieren.',
+    ehrenamt:{head:'Für Ehrenamt & Vereine',lede:'Ehrenamt und Hauptamt wirkungsvoll verbinden – professionell, ohne die Seele des Vereins zu verlieren.',
       sit:['Rollen und Führungsstrukturen zwischen Ehrenamt und Hauptamt klären','Professionalität stärken, ohne die Seele des Vereins zu verlieren'],
       help:['Begleitung in der Zusammenarbeit mit Hauptamtlichen','Trainings und Workshops']}
   };
-  var panel=document.getElementById('panel');
-  var el={num:document.getElementById('p-num'),head:document.getElementById('p-head'),lede:document.getElementById('p-lede'),sit:document.getElementById('p-sit'),help:document.getElementById('p-help')};
-  function li(ul,items){ul.innerHTML='';items.forEach(function(t){var l=document.createElement('li');l.textContent=t;ul.appendChild(l);});}
-  function show(key){var p=P[key];if(!p)return;el.num.textContent=p.n+' / 06';el.head.textContent=p.head;el.lede.textContent=p.lede;li(el.sit,p.sit);li(el.help,p.help);panel.classList.remove('swap');void panel.offsetWidth;panel.classList.add('swap');}
-  var tabs=document.querySelectorAll('.selector button');
+  var panel=document.getElementById('epanel');
+  var el={head:document.getElementById('e-head'),lede:document.getElementById('e-lede'),sit:document.getElementById('e-sit'),help:document.getElementById('e-help')};
+  function li(ul,items){ul.innerHTML='';items.forEach(function(x){var l=document.createElement('li');l.textContent=x;ul.appendChild(l);});}
+  function show(k){var p=P[k];if(!p)return;el.head.textContent=p.head;el.lede.textContent=p.lede;li(el.sit,p.sit);li(el.help,p.help);panel.classList.remove('swap');void panel.offsetWidth;panel.classList.add('swap');}
+  var tabs=document.querySelectorAll('.explore__tab');
   tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected','false');});b.setAttribute('aria-selected','true');show(b.getAttribute('data-p'));});});
   show('fuehrung');
 })();
