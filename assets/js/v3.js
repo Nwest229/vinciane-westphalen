@@ -51,3 +51,34 @@
   if (startBtn) { tabs.forEach(function (x) { x.setAttribute('aria-selected', 'false'); }); startBtn.setAttribute('aria-selected', 'true'); show(pre); }
   else show('fuehrung');
 })();
+
+// Logo-Umschalter (Vorschau für die Präsentation) – V3
+(function () {
+  var LOGOS = {
+    c: { h: '../assets/img/logo-5.png',    name: 'C · V in W' },
+    b: { h: '../assets/img/logo-6.png',    name: 'B · Chevron' },
+    a: { h: '../assets/img/logo-mark.png', name: 'A · Geometrisch' }
+  };
+  var order = ['c', 'b', 'a'];
+  function apply(k) {
+    if (!LOGOS[k]) k = 'c';
+    document.querySelectorAll('.brand img').forEach(function (i) { i.src = LOGOS[k].h; });
+    try { localStorage.setItem('wb-logo-v3', k); } catch (e) {}
+    document.querySelectorAll('.logo-switch button').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-logo') === k ? 'true' : 'false');
+    });
+  }
+  var saved = 'c';
+  try { saved = localStorage.getItem('wb-logo-v3') || 'c'; } catch (e) {}
+  var box = document.createElement('div');
+  box.className = 'logo-switch';
+  var html = '<p class="logo-switch__label">Logo · Vorschau</p><div class="logo-switch__row">';
+  order.forEach(function (k) { html += '<button type="button" data-logo="' + k + '">' + LOGOS[k].name + '</button>'; });
+  html += '</div>';
+  box.innerHTML = html;
+  document.body.appendChild(box);
+  box.querySelectorAll('button[data-logo]').forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.getAttribute('data-logo')); });
+  });
+  apply(saved);
+})();
