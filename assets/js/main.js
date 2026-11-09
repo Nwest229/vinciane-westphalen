@@ -34,9 +34,9 @@
 (function () {
   if (document.body.hasAttribute('data-no-switch')) return; // auf V3 ausgeblendet
   var THEMES = {
-    original: { h: 'assets/img/logo-vw.svg',    f: 'assets/img/logo-vw-light.svg',    c: '#c05f3c', name: 'Original' },
-    v1:       { h: 'assets/img/logo-vw-v1.svg', f: 'assets/img/logo-vw-light-v1.svg', c: '#3f6ca3', name: 'Blau &amp; Weiß' },
-    v2:       { h: 'assets/img/logo-vw-v2.svg', f: 'assets/img/logo-vw-light-v2.svg', c: '#9e7b3a', name: 'Blau &amp; Gold' }
+    original: { h: 'assets/img/logo-5.png', f: 'assets/img/logo-5-light.png', c: '#c05f3c', name: 'Original' },
+    v1:       { h: 'assets/img/logo-5.png', f: 'assets/img/logo-5-light.png', c: '#3f6ca3', name: 'Blau &amp; Weiß' },
+    v2:       { h: 'assets/img/logo-5.png', f: 'assets/img/logo-5-light.png', c: '#9e7b3a', name: 'Blau &amp; Gold' }
   };
   var order = ['original', 'v1', 'v2'];
 
