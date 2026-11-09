@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Logo-Auswahl – Westphalen Beratung</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--navy:#14284c;--ink:#1c2430;--muted:#59636f;--line:#e2e7ee;--bg:#fff;--bg2:#f3f6fa}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg2)}
+  .wrap{max-width:1040px;margin:0 auto;padding:48px 20px 80px}
+  h1{font-size:28px;margin:0 0 6px}
+  .sub{color:var(--muted);margin:0 0 36px;font-size:15px;max-width:60ch;line-height:1.5}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;margin-bottom:28px}
+  .card h2{font-size:17px;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:20px}
+  .ok{background:#e6f4ea;color:#1e7a43}.warn{background:#fdecec;color:#b23b3b}
+  .note{color:var(--muted);font-size:13.5px;margin:2px 0 20px;line-height:1.5}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:640px){.pair{grid-template-columns:1fr}}
+  .panel{border-radius:10px;padding:0;overflow:hidden;border:1px solid var(--line)}
+  .panel .bar{display:flex;align-items:center;gap:12px;padding:14px 18px}
+  .panel.light .bar{background:#fff}
+  .panel.dark .bar{background:var(--navy)}
+  .panel .bar img{height:42px;width:auto;display:block}
+  .panel .name{font-weight:600;font-size:14.5px}
+  .panel.dark .name{color:#fff}
+  .panel .big{display:flex;align-items:center;justify-content:center;padding:26px}
+  .panel.light .big{background:#fff}
+  .panel.dark .big{background:var(--navy)}
+  .panel .big img{height:90px;width:auto}
+  .cap{font-size:11.5px;color:var(--muted);text-align:center;padding:0 0 12px}
+  .panel.dark .cap{color:#aab6c8}
+  footer{color:var(--muted);font-size:13px;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Logo-Auswahl</h1>
+  <p class="sub">Alle Varianten des VW-Monogramms, jeweils in Kopfzeilen-Größe (hell) und auf dunklem Grund (dunkel). Sag mir, welche live gehen soll – dann setze ich sie überall ein.</p>
+
+  <div class="card">
+    <h2>Variante A – aktuelles Logo <span class="tag ok">im Einsatz</span></h2>
+    <p class="note">Geometrisches, ineinandergreifendes VW. Derzeit live auf der V3-Seite.</p>
+    <div class="pair">
+      <div class="panel light"><div class="bar"><img src="assets/img/logo-mark.png" alt=""><span class="name">Westphalen Beratung</span></div><div class="big"><img src="assets/img/logo-mark.png" alt=""></div><p class="cap">auf Weiß</p></div>
+      <div class="panel dark"><div class="bar"><img src="assets/img/logo-mark-light.png" alt=""><span class="name">Westphalen Beratung</span></div><div class="big"><img src="assets/img/logo-mark-light.png" alt=""></div><p class="cap">auf Navy</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Variante B – Monogramm „6“ <span class="tag ok">sauber</span></h2>
+    <p class="note">Klare Chevron-Form, aus der Vorlage sauber freigestellt – scharfe Kanten auf hell und dunkel.</p>
+    <div class="pair">
+      <div class="panel light"><div class="bar"><img src="assets/img/logo-6.png" alt=""><span class="name">Westphalen Beratung</span></div><div class="big"><img src="assets/img/logo-6.png" alt=""></div><p class="cap">auf Weiß</p></div>
+      <div class="panel dark"><div class="bar"><img src="assets/img/logo-6-light.png" alt=""><span class="name">Westphalen Beratung</span></div><div class="big"><img src="assets/img/logo-6-light.png" alt=""></div><p class="cap">auf Navy</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Variante C – Monogramm „5“ <span class="tag warn">Vorlage niedrig aufgelöst</span></h2>
+    <p class="note">Nur die blaue Form wurde freigestellt. Die Vorlage war ein kleines Foto auf Beton – deshalb wirken die Kanten rauer. Für sauberes Ergebnis bräuchte ich eine höher aufgelöste Datei dieser Variante.</p>
+    <div class="pair">
+      <div class="panel light"><div class="bar"><img src="assets/img/logo-5.png" alt=""><span class="name">Westphalen Beratung</span></div><div class="big"><img src="assets/img/logo-5.png" alt=""></div><p class="cap">auf Weiß</p></div>
+      <div class="panel dark"><div class="bar"><img src="assets/img/logo-5-light.png" alt=""><span class="name">Westphalen Beratung</span></div><div class="big"><img src="assets/img/logo-5-light.png" alt=""></div><p class="cap">auf Navy</p></div>
+    </div>
+  </div>
+
+  <footer>Alle Varianten in Site-Navy (#14284c) eingefärbt, transparenter Hintergrund.</footer>
+</div>
+</body>
+</html>
