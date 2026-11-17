@@ -45,9 +45,11 @@
   var LOGOS = {
     c: { h: 'assets/img/logo-5.png',    f: 'assets/img/logo-5-light.png',    name: 'C · V in W' },
     b: { h: 'assets/img/logo-6.png',    f: 'assets/img/logo-6-light.png',    name: 'B · Chevron' },
-    a: { h: 'assets/img/logo-mark.png', f: 'assets/img/logo-mark-light.png', name: 'A · Geometrisch' }
+    a: { h: 'assets/img/logo-mark.png', f: 'assets/img/logo-mark-light.png', name: 'A · Geometrisch' },
+    d: { h: 'assets/img/logo-8.png',    f: 'assets/img/logo-8-light.png',    name: 'D · Serif' },
+    e: { h: 'assets/img/logo-9.png',    f: 'assets/img/logo-9-light.png',    name: 'E · Serif schmal' }
   };
-  var logoOrder = ['c', 'b', 'a'];
+  var logoOrder = ['c', 'b', 'a', 'd', 'e'];
 
   function applyTheme(t) {
     if (!THEMES[t]) t = 'original';

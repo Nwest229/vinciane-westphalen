@@ -57,9 +57,11 @@
   var LOGOS = {
     c: { h: '../assets/img/logo-5.png',    name: 'C · V in W' },
     b: { h: '../assets/img/logo-6.png',    name: 'B · Chevron' },
-    a: { h: '../assets/img/logo-mark.png', name: 'A · Geometrisch' }
+    a: { h: '../assets/img/logo-mark.png', name: 'A · Geometrisch' },
+    d: { h: '../assets/img/logo-8.png',    name: 'D · Serif' },
+    e: { h: '../assets/img/logo-9.png',    name: 'E · Serif schmal' }
   };
-  var order = ['c', 'b', 'a'];
+  var order = ['c', 'b', 'a', 'd', 'e'];
   function apply(k) {
     if (!LOGOS[k]) k = 'c';
     document.querySelectorAll('.brand img').forEach(function (i) { i.src = LOGOS[k].h; });
