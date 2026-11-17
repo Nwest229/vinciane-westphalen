@@ -1,0 +1,19 @@
+/* V3 · Serif (Logo D) — klassisch, editorial, Serifen-Headlines, wärmeres Navy */
+:root{
+  --navy:#17233f;
+  --navy-700:#223457;
+  --blue:#365f93;
+  --blue-700:#2a4d79;
+  --blue-50:#eef2f8;
+  --bg-2:#f6f4ef;      /* warmes Hellgrau statt kühl */
+  --line:#e7e3da;
+  --radius:5px;
+}
+h1,h2,h3,h4{font-family:'Lora',Georgia,'Times New Roman',serif;font-weight:600;letter-spacing:-.005em}
+h1{line-height:1.1}
+.brand b{font-family:'Lora',Georgia,serif;font-weight:600}
+.hero__sub{font-size:clamp(1.15rem,1rem+.65vw,1.45rem)}
+.label{font-weight:600;letter-spacing:.16em}
+.sec{padding-block:clamp(3.4rem,7vw,6rem)}
+.hero{background:linear-gradient(180deg,#fff,var(--bg-2))}
+.quote p{font-style:italic}

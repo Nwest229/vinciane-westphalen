@@ -1,0 +1,19 @@
+/* V3 · Chevron (Logo B) — minimal, reduziert, viel Weißraum, Chevron-Akzente */
+:root{
+  --radius:7px;
+  --blue:#3b7fc4;
+  --blue-700:#2d6aad;
+  --blue-50:#eef5fb;
+  --bg-2:#f7fafd;
+  --line:#e8edf3;
+}
+h1,h2{font-weight:600;letter-spacing:-.01em}
+.hero__sub,.sec-head p{font-weight:400}
+/* Chevron-Winkel vor Labels */
+.label{letter-spacing:.2em;font-weight:600}
+.label::before{content:"\00BB";color:var(--blue);margin-right:.5rem;font-weight:700}
+/* luftiger: mehr Abstand, feinere Linien */
+.sec{padding-block:clamp(3.4rem,7vw,6.5rem)}
+.nav{border-bottom:1px solid var(--line)}
+.btn{border-radius:7px}
+.explore__panel,.stepc,.value,.tile,.quote,.card{border-color:var(--line)}

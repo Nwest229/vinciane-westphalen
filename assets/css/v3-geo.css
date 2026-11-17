@@ -1,0 +1,16 @@
+/* V3 · Geometrisch (Logo A) — modern, kantig, Space-Grotesk-Headlines, scharfe Ecken */
+:root{
+  --radius:3px;
+  --blue:#2458c9;
+  --blue-700:#1c47a6;
+  --blue-50:#e8eefc;
+  --bg-2:#eef2f8;
+}
+h1,h2,h3,h4{font-family:'Space Grotesk','Inter',system-ui,sans-serif;letter-spacing:-.03em;font-weight:700}
+.brand b{font-family:'Space Grotesk','Inter',system-ui,sans-serif;letter-spacing:-.02em}
+.label{font-weight:700;letter-spacing:.18em}
+.btn{border-radius:3px}
+.hero__media img,.kontakt-img,.about__media img,.explore__panel,.stepc,.value,.tile,.quote,.card,.field input,.field textarea{border-radius:3px}
+.hero{background:linear-gradient(180deg,#fff,var(--bg-2))}
+/* geometrischer Akzent: kantige Kopflinie */
+.sec-head .label::after,.phead .label::after{content:"";display:inline-block;width:26px;height:2px;background:var(--blue);margin-left:.6rem;vertical-align:middle}
